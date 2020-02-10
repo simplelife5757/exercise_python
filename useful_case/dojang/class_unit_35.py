@@ -10,6 +10,7 @@ def factorial(n):
 
 # self 없이 메서드 이름만 사용하면 클래스 바깥쪽에 있는 함수 호출 
 class Person:
+  # __slot__ = ['속성이름1', '속성이름2']
   __slot__ = ['name, age, address']
   
   def __init__(self, name, age, address, wallet):
@@ -39,3 +40,8 @@ is_instance = isinstance(jiwoo, Person)
 # 스페셜 메서드, 매직 메서드 
 # 리스트 언패킹 *args
 # 딕셔너리 언패킹 **kwargs
+
+def send(recipient, message):
+  return (recipient, message)
+
+send(recipient='x', message='y')
